@@ -3,6 +3,8 @@ package com.example.jetpackcompose
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.ScrollableColumn
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -23,7 +25,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            Column {
+            ScrollableColumn(
+                modifier = Modifier.background(
+                    color = Color(0xFFF2F2F2)
+                )
+            ) {
                 Image(
                     bitmap = imageFromResource(
                         res = resources,
