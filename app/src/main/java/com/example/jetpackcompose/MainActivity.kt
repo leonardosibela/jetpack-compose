@@ -17,7 +17,23 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Image(bitmap = imageFromResource(res = resources, resId = R.drawable.happy_meal_small))
+            Column {
+                Image(
+                    bitmap = imageFromResource(
+                        res = resources,
+                        resId = R.drawable.happy_meal_small
+                    )
+                )
+                Column(
+                    modifier = Modifier.padding(16.dp)
+                ) {
+                    Text(text = "Happy Meal")
+                    Spacer(modifier = Modifier.padding(top = 10.dp))
+                    Text(text = "800 calories")
+                    Spacer(modifier = Modifier.padding(top = 10.dp))
+                    Text(text = "$5.99")
+                }
+            }
         }
     }
 }
