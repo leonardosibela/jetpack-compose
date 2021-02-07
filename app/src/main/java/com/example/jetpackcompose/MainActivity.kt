@@ -1,19 +1,15 @@
 package com.example.jetpackcompose
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.compose.foundation.*
+import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.imageFromResource
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.setContent
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 
 class MainActivity : AppCompatActivity() {
@@ -21,40 +17,42 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(200.dp)
-                    .border(
-                        border = BorderStroke(
-                            width = 1.dp,
-                            color = Color.Black
+            Column {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(200.dp)
+                        .border(
+                            border = BorderStroke(
+                                width = 1.dp,
+                                color = Color.Black
+                            )
                         )
+                ) {
+                    Text(
+                        modifier = Modifier.align(Alignment.CenterHorizontally),
+                        text = "Item 1"
                     )
-            ) {
-                Text(
-                    modifier = Modifier.align(Alignment.CenterVertically),
-                    text = "Item 1"
-                )
-            }
+                }
 
+                Spacer(modifier = Modifier.padding(26.dp))
 
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(200.dp)
-                    .width(200.dp)
-                    .border(
-                        border = BorderStroke(
-                            width = 1.dp,
-                            color = Color.Black
+                Row(
+                    modifier = Modifier
+                        .height(200.dp)
+                        .width(200.dp)
+                        .border(
+                            border = BorderStroke(
+                                width = 1.dp,
+                                color = Color.Black
+                            )
                         )
+                ) {
+                    Text(
+                        modifier = Modifier.align(Alignment.CenterVertically),
+                        text = "Item 1"
                     )
-            ) {
-                Text(
-                    modifier = Modifier.align(Alignment.CenterHorizontally),
-                    text = "Item 1"
-                )
+                }
             }
         }
 
