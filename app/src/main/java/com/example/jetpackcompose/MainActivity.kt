@@ -6,6 +6,7 @@ import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
 import androidx.compose.material.Text
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.imageFromResource
@@ -31,7 +32,29 @@ class MainActivity : AppCompatActivity() {
                         )
                     )
             ) {
-                Text(text = "Item 1")
+                Text(
+                    modifier = Modifier.align(Alignment.CenterVertically),
+                    text = "Item 1"
+                )
+            }
+
+
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(200.dp)
+                    .width(200.dp)
+                    .border(
+                        border = BorderStroke(
+                            width = 1.dp,
+                            color = Color.Black
+                        )
+                    )
+            ) {
+                Text(
+                    modifier = Modifier.align(Alignment.CenterHorizontally),
+                    text = "Item 1"
+                )
             }
         }
 
