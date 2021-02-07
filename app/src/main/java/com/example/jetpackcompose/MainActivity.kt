@@ -34,6 +34,10 @@ class MainActivity : AppCompatActivity() {
                         modifier = Modifier.align(Alignment.CenterHorizontally),
                         text = "Item 1"
                     )
+                    Text(
+                            modifier = Modifier.align(Alignment.CenterHorizontally),
+                    text = "Item 1"
+                    )
                 }
 
                 Spacer(modifier = Modifier.padding(26.dp))
