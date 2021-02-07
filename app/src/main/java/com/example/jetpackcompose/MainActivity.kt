@@ -27,7 +27,8 @@ class MainActivity : AppCompatActivity() {
                                 width = 1.dp,
                                 color = Color.Black
                             )
-                        )
+                        ),
+                    verticalArrangement = Arrangement.Center
                 ) {
                     Text(
                         modifier = Modifier.align(Alignment.CenterHorizontally),
